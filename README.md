@@ -3,7 +3,6 @@ Streamlit app to analyze resumes using OpenRouter AI built for HackaTime Summer 
 
 🚀 Try it live: [AI Resume Analyzer](https://airesumeanalyzer-dijnra5bmvfnqjdkndbf5v.streamlit.app/)
 
-Streamlit app to analyze resumes using OpenRouter AI built for HackaTime Summer of Making 🚀
 
 # ***✨ Features***<br>
 1) You can Upload your resume in PDF or TXT format<br>
