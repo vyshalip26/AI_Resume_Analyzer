@@ -1,3 +1,4 @@
+import base64
 import streamlit as st
 import requests
 import io
@@ -7,15 +8,23 @@ from dotenv import load_dotenv
 
 load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-
 # Page config
 st.set_page_config(page_title="AI Resume Analyzer", page_icon="📄", layout="centered")
+def autoplay_video(path):
+    with open(path, "rb") as video_file:
+        video_bytes = video_file.read()
+        encoded = base64.b64encode(video_bytes).decode()
 
-# ⬇️ Add video (small welcome animation)
-video_file = open("cv.mp4", "rb")
-video_bytes = video_file.read()
-st.video(video_bytes, format="video/mp4")
-#
+        video_html = f"""
+        <video width="100%" height="auto" autoplay muted loop playsinline style="border-radius: 10px;">
+            <source src="data:video/mp4;base64,{encoded}" type="video/mp4">
+        </video>
+        """
+        st.markdown(video_html, unsafe_allow_html=True)
+
+# Call this at the top of your app
+autoplay_video("cv.mp4")
+
 
 # Main title and description
 st.title("AI RESUME ANALYZER")
