@@ -1,10 +1,10 @@
 # AI_Resume_Analyzer
-Streamlit app to analyze resumes using OpenRouter AI – built for HackaTime Summer of Making 🚀<br><br>
+Streamlit app to analyze resumes using OpenRouter AI built for HackaTime Summer of Making 🚀<br><br>
 
 # ***✨ Features***<br>
 1) You can Upload your resume in PDF or TXT format<br>
 
-2) (Optionally) specify your target job role<br>
+2) Optionally specify your target job role<br>
 
 3) Uses OpenRouter AI to analyze:<br>
 - Content clarity & structure<br>
@@ -40,18 +40,18 @@ OPENROUTER_API_KEY=your_api_key_here
 streamlit run main.py
 ```
 # ***📦 Tech Stack***<br>
-[] Python
+- Python
 
-[] Streamlit
+- Streamlit
 
-[] OpenRouter AI API
+- OpenRouter AI API
 
-[] PyPDF2
+- PyPDF2
 
-[] dotenv
+- dotenv
 
 # How was AI used in the project?
-I used AI (ChatGPT) throughout my development journey — it guided me step-by-step in writing Python and Streamlit code, debugging errors, integrating OpenRouter's API, and handling virtual environments.
+I used AI ChatGPT throughout my development journey — it guided me step-by-step in writing Python and Streamlit code, debugging errors, integrating OpenRouter's API, and handling virtual environments.
 
 AI also helped me structure my README, fix Markdown formatting, manage .env files securely, and finally upload the entire project to GitHub successfully.
 
@@ -61,5 +61,3 @@ Participating in HackaTime Summer of Making has been an incredible experience. I
 With the help of AI and the support of the Hack Club community, I was able to bring my project to life and gain hands-on experience in building and deploying real-world applications.
 
 Huge thanks to the HackaTime team for organizing this amazing initiative — it truly sparked my creativity and helped me grow as a developer. Looking forward to learning and building more! 💻✨
-
-
