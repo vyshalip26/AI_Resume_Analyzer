@@ -2,14 +2,15 @@ import base64
 import streamlit as st
 import requests
 import io
-import PyPDF2
+import PyPDF2 
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-# Page config
+
 st.set_page_config(page_title="AI Resume Analyzer", page_icon="📄", layout="centered")
+
 def autoplay_video(path):
     with open(path, "rb") as video_file:
         video_bytes = video_file.read()
@@ -22,9 +23,7 @@ def autoplay_video(path):
         """
         st.markdown(video_html, unsafe_allow_html=True)
 
-# Call this at the top of your app
 autoplay_video("cv.mp4")
-
 
 # Main title and description
 st.title("AI RESUME ANALYZER")
@@ -48,7 +47,7 @@ def extract_text(uploaded_file):
 def extract_name_from_resume(resume_text):
     lines = resume_text.strip().split("\n")
     for line in lines:
-        if line.strip():  # first non-empty line
+        if line.strip():  
             return line.strip()
     return "Candidate"
 
@@ -75,12 +74,10 @@ if analyze and uploaded_file:
     {resume_text}
     """
 
-
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json"
     }
-
 
     data = {
         "model": "mistralai/mistral-7b-instruct",
