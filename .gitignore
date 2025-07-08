@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -228,4 +228,3 @@ wheels/
 __pycache__/
 *.pyc
 .DS_Store
->>>>>>> 93ec3ce (Added main.py file)
